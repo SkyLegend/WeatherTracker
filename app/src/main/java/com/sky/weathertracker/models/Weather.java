@@ -4,7 +4,13 @@ import java.util.Date;
 import java.util.ArrayList;
 
 /**
- * Created by Thomas Tran on 15-03-29.
+ * Weather
+ * @description This Weather class is model after the JSON object that is returned from the API.
+ *              Each inner class and variable corresponds to the incoming JSON object that is
+ *              retrieved.
+ *
+ * @author Thomas Tran
+ * @date 03-29-2015
  */
 public class Weather {
     private ArrayList<Forecast> mForecastList;
@@ -16,6 +22,10 @@ public class Weather {
     private Image mImage;
     private Item mItem;
     private Forecast mForecast;
+
+    public Weather(){
+        mForecastList = new ArrayList<>();
+    }
 
     public ArrayList<Forecast> getmForecastList() {
         return mForecastList;
@@ -89,10 +99,14 @@ public class Weather {
         this.mForecast = mForecast;
     }
 
-    public Weather(){
-        mForecastList = new ArrayList<>();
-    }
-
+    /**
+     * Location
+     * @description This Location class is an inner class of the weather object, this is used to map
+     *              the location section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Location{
         private String mCity;
         private String mCountry;
@@ -123,6 +137,14 @@ public class Weather {
         }
     }
 
+    /**
+     * Units
+     * @description This Units class is an inner class of the weather object, this is used to map
+     *              the units section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Units{
         private String mDistance;
         private String mPressure;
@@ -162,6 +184,14 @@ public class Weather {
         }
     }
 
+    /**
+     * Wind
+     * @description This Wind class is an inner class of the weather object, this is used to map
+     *              the wind section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Wind{
         private Double mChill;
         private Double mDirection;
@@ -192,6 +222,14 @@ public class Weather {
         }
     }
 
+    /**
+     * Atmosphere
+     * @description This Atmosphere class is an inner class of the weather object, this is used to map
+     *              the atmosphere section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Atmosphere{
         private Double mHumidity;
         private Double mPressure;
@@ -231,6 +269,14 @@ public class Weather {
         }
     }
 
+    /**
+     * Astronomy
+     * @description This Astronomy class is an inner class of the weather object, this is used to map
+     *              the astronomy section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Astronomy{
         private String mSunrise;
         private String mSunset;
@@ -252,6 +298,14 @@ public class Weather {
         }
     }
 
+    /**
+     * Image
+     * @description This Image class is an inner class of the weather object, this is used to map
+     *              the image section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Image{
         private String mTitle;
         private Double mWidth;
@@ -300,6 +354,14 @@ public class Weather {
         }
     }
 
+    /**
+     * Item
+     * @description This Item class is an inner class of the weather object, this is used to map
+     *              the item section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Item{
         private Condition mCondition;
         private String mTitle;
@@ -365,6 +427,15 @@ public class Weather {
             this.mDescription = mDescription;
         }
 
+        /**
+         * Condition
+         * @description This Condition class is an inner class of the Item object, which the Item
+         *              class is a inner class of the Weather object, this is used to map
+         *              the location section of the retrieved JSON object.
+         *
+         * @author Thomas Tran
+         * @date 03-29-2015
+         */
         public class Condition{
             public String mCode;
             public Date mDate;
@@ -405,6 +476,14 @@ public class Weather {
         }
     }
 
+    /**
+     * Forecast
+     * @description This Forecast class is an inner class of the weather object, this is used to map
+     *              the forecast section of the retrieved JSON object.
+     *
+     * @author Thomas Tran
+     * @date 03-29-2015
+     */
     public class Forecast{
         private String mCode;
         private Date mDate;
