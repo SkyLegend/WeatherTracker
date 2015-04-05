@@ -1,6 +1,6 @@
 # WeatherTracker
 
-Weather Tracker App displays todays weather, next 5 days, and temperature chart to display the the high and lows for the next 14 days.
+Weather Tracker App displays todays weather, next 5 days, and temperature chart to display the the high and lows for the next 5 days.
 
 1) Display Current Weather.
 2) Display 5 Day Weather Forecast.
